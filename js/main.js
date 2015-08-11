@@ -15,8 +15,14 @@ function main() {
     console.log(curr_pos);
     var windowheight = $(window).height();
     if (hidepage_enabled && $(".page-hide:visible").length && ($(".page-hide:visible").offset().top > curr_pos + windowheight || $(".page-hide:visible").offset().top + $(".page-hide:visible").outerHeight() < curr_pos)){
-     if ($(".page-hide:visible").offset().top + $(".page-hide:visible").outerHeight() < curr_pos) $(window).scrollTop(curr_pos - $(".page-hide:visible").outerHeight());
-     $(".page-hide").hide();
+     if ($(".page-hide:visible").offset().top + $(".page-hide:visible").outerHeight() < curr_pos) {
+      var new_pos = curr_pos - $(".page-hide:visible").outerHeight();
+      $(".page-hide").stop().hide();
+      $(window).scrollTop(new_pos);
+     }
+     else{
+       $(".page-hide").hide();
+     }
      hidepage_enabled = false;
    }
 
