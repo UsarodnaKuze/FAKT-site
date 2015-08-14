@@ -797,11 +797,15 @@ ol.type li a.active { font-weight: 700; }
 	margin: 0 auto;
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.66);
-	/*padding: 25% 0;*/
+	padding: 25% 0;
 	height: 100%;
 	width: 100%;
 	opacity: 0;
     transition: all 0.5s;
+}
+
+.hover-bg .hover-text.nocenter {
+	padding:0
 }
 .hover-bg .hover-text>h4{
 	opacity: 0;
@@ -1074,4 +1078,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 
 .owl-theme .owl-controls .owl-page span {
     background: black;
+}
+
+#golyaAktualis{
+	background: rgba(48, 131, 48, 0.4);
 }

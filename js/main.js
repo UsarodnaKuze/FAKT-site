@@ -43,18 +43,18 @@ function main() {
           var showpage = $(this).attr("href");
           $(".page-upper").hide();
           $(showpage).show();
-          
-      
+          var animationspeed = 900;
+      if($(this).hasClass("noscroll")) animationspeed = 0;
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
-            $("#tf-menu").fadeOut(900);
+            $("#tf-menu").fadeOut(animationspeed);
             $(target).animate({
               margin: 0
-            }, 900, function(){if ($(showpage).hasClass("page-upper")) upperpage_enabled = true;});
+            }, animationspeed, function(){if ($(showpage).hasClass("page-upper")) upperpage_enabled = true;});
             $('html,body').animate({
               scrollTop: target.offset().top - 40
-            }, 900);
+            }, animationspeed);
             return false;
           }
         }
@@ -76,7 +76,7 @@ function main() {
           if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top - 40
-            }, 900, function(){if ($(showpage).hasClass("page-hide")) hidepage_enabled = true;});
+            }, animationspeed, function(){if ($(showpage).hasClass("page-hide")) hidepage_enabled = true;});
             return false;
           }
         }
@@ -140,10 +140,12 @@ function main() {
         navigation : false, // Show next and prev buttons
         slideSpeed : 300,
         paginationSpeed : 400,
-        singleItem:true
+        singleItem:true,
+        autoplay:true
         });
 
-  	});
+    });
+      //owl.trigger (owl.play,6000);
 
   	/*====================================
     Portfolio Isotope Filter
