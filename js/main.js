@@ -44,7 +44,7 @@ function main() {
           $(".page-upper").hide();
           $(showpage).show();
           var animationspeed = 900;
-      if($(this).hasClass("noscroll")) animationspeed = 0;
+      if ($(this).hasClass("noscroll")) animationspeed = 0;
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
@@ -76,7 +76,7 @@ function main() {
           if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top - 40
-            }, animationspeed, function(){if ($(showpage).hasClass("page-hide")) hidepage_enabled = true;});
+            }, 900, function(){if ($(showpage).hasClass("page-hide")) hidepage_enabled = true;});
             return false;
           }
         }
