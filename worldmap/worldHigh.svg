@@ -2,6 +2,8 @@
 <!-- (c) ammap.com | SVG map of World - High -->
 
 <svg
+  viewBox="0 -200 1000 1000"
+  preserveAspectRatio="xMinYMin meet"
    xmlns:amcharts="http://amcharts.com/ammap"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
