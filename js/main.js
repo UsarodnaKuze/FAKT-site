@@ -27,11 +27,16 @@ function main() {
    }
 
     if (upperpage_enabled && $(".page-upper:visible").length && $(".page-upper:visible").offset().top + $(".page-upper:visible").outerHeight() <= curr_pos) {
-     $(".page-upper:visible").css("margin-top","-820px");
+     $(".page-upper:visible").css("margin-top","-"+Number($(".page-upper:visible").outerHeight()+40)+"px");
      $(window).scrollTop(curr_pos - $(".page-upper:visible").outerHeight());
      $("#tf-menu").fadeIn(1000);
      upperpage_enabled = false;
     }
+   });
+
+  $(window).resize(function() {
+$(".page-upper:visible").css("margin-top","-"+Number($(".page-upper:visible").outerHeight()+40)+"px");
+
    });
 
    /* ==============================================
@@ -48,6 +53,7 @@ function main() {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
+            $(target).css("height","auto");
             $("#tf-menu").fadeOut(animationspeed);
             $(target).animate({
               margin: 0
@@ -59,6 +65,8 @@ function main() {
           }
         }
       });
+
+
 
    /* ==============================================
     Testimonial Slider
@@ -105,7 +113,8 @@ function main() {
   	      navigation : false, // Show next and prev buttons
   	      slideSpeed : 300,
   	      paginationSpeed : 400,
-  	      autoHeight : true,
+  	      autoHeight : false,
+          autoPlay:true,
   	      itemsCustom : [
 				        [0, 1],
 				        [450, 2],
@@ -141,11 +150,21 @@ function main() {
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true,
-        autoPlay:true
+        autoPlay:10000
         });
 
     });
       //owl.trigger (owl.play,6000);
+
+
+         /* ==============================================
+    Accordion
+    =============================================== */ 
+
+    $('div.panel-heading').click(function() {
+        $(this).children("h4").children("a").click();
+      })
+
 
   	/*====================================
     Portfolio Isotope Filter
