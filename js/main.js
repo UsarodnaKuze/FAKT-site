@@ -161,7 +161,8 @@ $(".page-upper:visible").css("margin-top","-"+Number($(".page-upper:visible").ou
     Accordion
     =============================================== */ 
 
-    $('div.panel-heading').click(function() {
+    $('div.panel-heading').click(function(e) {
+        if ($(e.target).is("a") == false)
         $(this).children("h4").children("a").click();
       })
 
