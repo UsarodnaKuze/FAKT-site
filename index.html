@@ -1625,7 +1625,7 @@ Template Name: New page
                 <div class="about-text">
                 <center>
                 <div class="col-xs-12 service ">
-                    <i class="fa fa-clock-o"></i>
+                    <i class="fa fa-plus-square-o"></i>
                     <h4><strong>Őszi félév</strong></h4>
                 </div>
                 </center>
@@ -1656,7 +1656,7 @@ Template Name: New page
 
                 <center>
                 <div class="col-xs-12 service">
-                    <i class="fa fa-building"></i>
+                    <i class="fa fa-check-square-o"></i>
                     <h4><strong>Tavaszi félév</strong></h4>
                 </div>
                 </center>
@@ -1682,7 +1682,7 @@ Template Name: New page
     <div id="tf-aktualis" class="col-xs-offset-0 col-xs-12 col-md-offset-2 col-md-8">
         <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
-  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>
 <!--     <div class="post-header">
         <div class="date"><?php the_time( 'M j y' ); ?></div>
         <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
