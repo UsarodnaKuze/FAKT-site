@@ -8,6 +8,15 @@ function main() {
 
 (function () {
    'use strict';
+   $('body').click(function (e) {
+    if (!($(e.target).parent().hasClass("hover-text") == true || $(e.target).hasClass("hover-text") == true)){
+      $('.hover-bg').removeClass("hovered");
+      console.log(e.target);
+   }
+   })
+   $('.hover-bg').click(function() {
+    $(this).toggleClass("hovered");
+   });
    var hidepage_enabled = false;
    var upperpage_enabled = false;
    $(window).scroll(function() {

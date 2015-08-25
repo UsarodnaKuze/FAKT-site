@@ -803,6 +803,12 @@ ol.type li a.active { font-weight: 700; }
 	opacity: 0;
     transition: all 0.5s;
 }
+@media (max-width: 768px){
+.hover-bg .hover-text {
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+}
 
 .hover-bg .hover-text.nocenter {
 	padding:0
@@ -814,6 +820,12 @@ ol.type li a.active { font-weight: 700; }
             transition: all 0.3s;
 }
 .hover-bg:hover .hover-text>h4{
+	opacity: 1;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+.hover-bg.hovered .hover-text>h4{
 	opacity: 1;
     -webkit-backface-visibility:hidden;
     -webkit-transform: translateY(0);
@@ -832,6 +844,15 @@ ol.type li a.active { font-weight: 700; }
             transform: translateY(100%);
 }
 .hover-bg:hover .hover-text{
+	opacity: 1;
+}
+.hover-bg.hovered .hover-text>i{
+	opacity: 1;
+    -webkit-backface-visibility:hidden;
+   -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+}
+.hover-bg.hovered .hover-text{
 	opacity: 1;
 }
 /*
