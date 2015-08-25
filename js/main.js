@@ -14,7 +14,7 @@ function main() {
     var curr_pos = $(this).scrollTop();
     console.log(curr_pos);
     var windowheight = $(window).height();
-    if (hidepage_enabled && $(".page-hide:visible").length && ($(".page-hide:visible").offset().top > curr_pos + windowheight || $(".page-hide:visible").offset().top + $(".page-hide:visible").outerHeight() < curr_pos)){
+    if (hidepage_enabled && $(".page-hide:visible").length && ($(".page-hide:visible").offset().top > curr_pos + windowheight)){
      if ($(".page-hide:visible").offset().top + $(".page-hide:visible").outerHeight() < curr_pos) {
       var new_pos = curr_pos - $(".page-hide:visible").outerHeight();
       $(".page-hide").stop().hide();

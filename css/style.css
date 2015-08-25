@@ -1130,3 +1130,6 @@ div.wpb_gallery_slides.wpb_flexslider.flexslider_fade.flexslider{
 .adminbar nav.navbar-fixed-top{
 	top:30px;
 }
+hr.center-block{
+	float:none;
+}
