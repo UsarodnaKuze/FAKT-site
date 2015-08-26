@@ -6,6 +6,7 @@ body, html{
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #5a5a5a;
+	overflow-x: hidden;
 }
 
 h1{
@@ -146,7 +147,11 @@ font-weight: 900;
 	position: relative;
 	padding: 20% 0 0;
 }
-
+@media(max-width: 768px){
+#tf-home .content{
+	padding: 40% 0 0;
+}
+}
 .color{
 	color: #308330;
 }
@@ -1137,6 +1142,13 @@ ul.slides li div.flex-caption{
 	width: 8%;
 }
 }
+#tf-upperblock .flex-control-paging li a{
+	background: rgba(255,255,255,0.5);
+}
+#tf-upperblock .flex-control-paging li a.flex-active{
+	background: rgba(255,255,255,1);
+}
+
 div.wpb_gallery_slides.wpb_flexslider.flexslider_fade.flexslider{
 	border-color:rgba(0,0,0,0.8);
 	background:rgba(0,0,0,0.6);

@@ -8,15 +8,31 @@ function main() {
 
 (function () {
    'use strict';
+
+   function debouncer( func , timeout ) {
+   var timeoutID , timeout = timeout || 200;
+   return function () {
+      var scope = this , args = arguments;
+      clearTimeout( timeoutID );
+      timeoutID = setTimeout( function () {
+          func.apply( scope , Array.prototype.slice.call( args ) );
+      } , timeout );
+    }
+   }
+
+
    $('body').click(function (e) {
     if (!($(e.target).parent().hasClass("hover-text") == true || $(e.target).hasClass("hover-text") == true)){
       $('.hover-bg').removeClass("hovered");
       console.log(e.target);
    }
    })
+
    $('.hover-bg').click(function() {
+    $('.hover-bg').not(this).removeClass("hovered");
     $(this).toggleClass("hovered");
    });
+   
    var hidepage_enabled = false;
    var upperpage_enabled = false;
    $(window).scroll(function() {
@@ -43,10 +59,9 @@ function main() {
     }
    });
 
-  $(window).resize(function() {
-$(".page-upper:visible").css("margin-top","-"+Number($(".page-upper:visible").outerHeight()+40)+"px");
-
-   });
+  $(window).resize(debouncer( function ( e ){
+    $(".page-upper:visible").css("margin-top","-"+Number($(".page-upper:visible").outerHeight()+40)+"px");
+   }));
 
    /* ==============================================
     Uppper Slider
