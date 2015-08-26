@@ -102,7 +102,7 @@ font-weight: 900;
 .navbar-default .navbar-nav > .active > a:focus {
 	color: #308330 !important;
 	background-color: transparent;
-	font-weight: 700;
+	/*font-weight: 700;*/
 }
 
 .navbar-toggle {
