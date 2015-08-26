@@ -17,7 +17,7 @@ h1 strong{
 }
 h2{
 	text-transform: uppercase;
-	line-height: 20px;
+	line-height: 1.4;
 	margin:  0;
 }
 h3{
@@ -1011,6 +1011,11 @@ nav#footer p{
 	margin-right:-60px;
 	margin-top:-40px;
 }
+/*@media()	TODO!
+#headerFacebook{
+	margin-right:-60px;
+	margin-top:-40px;
+}*/
 	/* Social Links
 }
 ---------------------------------- */
@@ -1173,4 +1178,10 @@ div.wpb_gallery_slides.wpb_flexslider.flexslider_fade.flexslider{
 }
 hr.center-block{
 	float:none;
+}
+#tf-team .col-xs-6 {
+    min-height: 220px;
+}
+#tf-about .row div.col-md-4 {
+    min-height: 300px;
 }
