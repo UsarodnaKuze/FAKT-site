@@ -124,8 +124,6 @@ font-weight: 900;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #cfcfcf;
-	margin-top:-1000px;
-	border-top:1000px solid rgba(0,0,0,0.6);
 }
 
 #tf-home .overlay{
@@ -1008,14 +1006,13 @@ nav#footer p{
 	color: #ffffff;
 }
 #headerFacebook{
-	margin-right:-60px;
 	margin-top:-40px;
 }
-/*@media()	TODO!
+@media (max-width: 768px){
 #headerFacebook{
-	margin-right:-60px;
-	margin-top:-40px;
-}*/
+	margin-right:50px;
+}
+}
 	/* Social Links
 }
 ---------------------------------- */
@@ -1167,6 +1164,16 @@ div.wpb_gallery_slides.wpb_flexslider.flexslider_fade.flexslider{
 	height:800px;
 	padding:0 5% 20px 5%;
 	margin-top:-820px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#308330+0,000000+100 */
+background: rgb(48,131,48); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(48,131,48,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(48,131,48,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(48,131,48,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(48,131,48,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(48,131,48,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(48,131,48,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#308330', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 }
 
 .adminbar{
@@ -1184,4 +1191,7 @@ hr.center-block{
 }
 #tf-about .row div.dropdown1 {
     min-height: 300px;
+}
+#bs-example-navbar-collapse-1 ul li:last-child {
+	padding-right:50px;
 }
