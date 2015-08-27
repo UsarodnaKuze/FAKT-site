@@ -118,7 +118,7 @@ font-weight: 900;
 	}
 /* Home Style */
 #tf-home{
-	background: url(../img/home.jpg);
+	background: url(../img/header/home.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -198,7 +198,7 @@ font-size: 14px;
 
 /* Team Section */
 .fejlec{
-	background: url(../img/kozosseg.jpg);
+	background: url(../img/header/kozosseg.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -334,7 +334,7 @@ img.img-circle.team-img {
 
 /* Team Section */
 .fejlec2{
-	background: url(../img/csr.jpg);
+	background: url(../img/header/csr.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -460,7 +460,7 @@ img.img-circle.team-img {
 
 /* Team Section */
 .fejlec3{
-	background: url(../img/szervezet.jpg);
+	background: url(../img/header/szervezet.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -586,7 +586,7 @@ img.img-circle.team-img {
 
 /* Team Section */
 .fejlec4{
-	background: url(../img/golyaknak.jpg);
+	background: url(../img/header/golyaknak.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
