@@ -99,7 +99,7 @@ function main() {
     $('a.page-scroll').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var showpage = $(this).attr("href");
-          $(".page-hide.common").hide();
+          if ($(showpage).hasClass("common")) $(".page-hide.common").hide();
           $(showpage).show();
           
       
